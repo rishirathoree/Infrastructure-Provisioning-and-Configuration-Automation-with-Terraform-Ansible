@@ -204,6 +204,45 @@ Swap:             0B          0B          0B
 
 ------------------------------------------------------------------------
 
+## Create Ansible Playbook to Install Nginx on Host Mentioned Machines
+
+Create the playbook file
+```
+mkdir -p /home/ubuntu/playbook
+```
+
+Add the playbook
+```
+touch nginx.yml
+```
+
+Edit the playbook
+```
+sudo nano nginx.yml
+```
+
+Add the following YAML content:
+```
+---
+- name: Install Ngninx Server
+  hosts: dev
+  become: true
+  tasks:
+    - name: Install Ngninx Server
+      apt:
+        name: nginx
+        state: present
+    - name: Start Nginx Server
+      service:
+        name: nginx
+        state: started
+```
+
+Running the Playbook
+```
+ansible-playbook nginx.yml
+```
+
 
 ## ✅ Setup Complete
 You can now deploy playbooks, configure servers, or extend
