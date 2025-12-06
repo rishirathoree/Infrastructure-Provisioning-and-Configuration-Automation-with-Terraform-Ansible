@@ -8,8 +8,6 @@ vm
 *.tfplan
 .terraform.lock.hcl
 
-.ansibilehost.sh
-
 ansibilehost.sh
 
 # Keep your Terraform config files
