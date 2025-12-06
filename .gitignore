@@ -8,6 +8,8 @@ vm
 *.tfplan
 .terraform.lock.hcl
 
+.ansibilehost.sh
+
 # Keep your Terraform config files
 !main.tf
 !variables.tf
