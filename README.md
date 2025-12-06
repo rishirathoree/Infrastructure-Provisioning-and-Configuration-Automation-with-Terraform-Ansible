@@ -206,14 +206,5 @@ Swap:             0B          0B          0B
 
 
 ## ✅ Setup Complete
-
-You now have:
-
--   A VM root folder containing your SSH key\
--   Terraform‑provisioned AWS infrastructure\
--   Ansible master configured\
--   Passwordless SSH to all managed nodes\
--   A fully automated IaC pipeline
-
 You can now deploy playbooks, configure servers, or extend
 infrastructure using Terraform.
