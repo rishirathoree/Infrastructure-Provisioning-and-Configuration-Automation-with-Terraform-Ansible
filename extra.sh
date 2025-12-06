@@ -54,6 +54,7 @@ ssh -i mykey ubuntu@13.200.231.124
 
 ansible dev -m ping
 
+
  git add .
  git commit -m "added changes"
  git push origin main
