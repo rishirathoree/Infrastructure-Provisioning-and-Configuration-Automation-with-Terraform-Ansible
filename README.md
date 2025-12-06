@@ -183,6 +183,23 @@ Expected output:
 ansible dev -a "df -h"
 ```
 
+Expected output:
+
+
+[WARNING]: Host 'server-2' is using the discovered Python interpreter at '/usr/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+server-2 | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:           914Mi       355Mi       352Mi       2.7Mi       364Mi       558Mi
+Swap:             0B          0B          0B
+[WARNING]: Host 'server-1' is using the discovered Python interpreter at '/usr/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+server-1 | CHANGED | rc=0 >>
+               total        used        free      shared  buff/cache   available
+Mem:           914Mi       373Mi       305Mi       2.7Mi       393Mi       540Mi
+Swap:             0B          0B          0B
+
+
+------------------------------------------------------------------------
+
 
 ## ✅ Setup Complete
 
