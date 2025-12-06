@@ -1,0 +1,13 @@
+---
+- name: Install Ngninx Server
+  hosts: dev
+  become: true
+  tasks:
+    - name: Install Ngninx Server
+      apt:
+        name: nginx
+        state: present
+    - name: Start Nginx Server
+      service:
+        name: nginx
+        state: started

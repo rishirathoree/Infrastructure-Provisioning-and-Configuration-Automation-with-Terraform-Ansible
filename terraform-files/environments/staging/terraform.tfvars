@@ -1,0 +1,7 @@
+environment        = "staging"
+vpc_cidr           = "10.0.0.0/16"
+public_subnet_cidr = "10.0.0.0/24"
+ami                = "ami-02b8269d5e85954ef"
+instance_type_agent  = "t3.micro"
+instance_type_jenkins = "c7i-flex.large"
+key_name = "mykey"
