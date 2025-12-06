@@ -243,6 +243,14 @@ Running the Playbook
 ansible-playbook nginx.yml
 ```
 
+Destroy all the aws configurations after using:
+
+Go to Terraform-files -> environment -> dev
+
+```
+terraform destroy --auto-approve
+```
+
 
 ## ✅ Setup Complete
 You can now deploy playbooks, configure servers, or extend
