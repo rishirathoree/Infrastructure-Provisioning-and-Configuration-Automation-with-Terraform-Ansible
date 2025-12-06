@@ -10,6 +10,8 @@ vm
 
 .ansibilehost.sh
 
+ansibilehost.sh
+
 # Keep your Terraform config files
 !main.tf
 !variables.tf
