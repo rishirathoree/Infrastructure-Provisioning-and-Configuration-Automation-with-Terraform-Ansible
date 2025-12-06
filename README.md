@@ -8,6 +8,28 @@ IaC workflow.
 
 ------------------------------------------------------------------------
 
+
+## 🌩 Configure AWS CLI on Ansible Server
+
+Terraform requires AWS CLI credentials with **AdministratorAccess**.
+
+``` bash
+aws configure
+```
+
+Provide:
+
+-   AWS Access Key ID\
+-   AWS Secret Access Key\
+-   Default region (ex: ap-south-1)\
+-   Output → json
+
+Ensure IAM user/role has:
+
+    AdministratorAccess
+
+------------------------------------------------------------------------
+
 ## 📂 Step 0: Create VM Folder & Generate SSH Key
 
 On your **local machine**, create a VM workspace and generate your SSH
@@ -113,26 +135,6 @@ If both connect without prompts, SSH is configured correctly.
 
 ------------------------------------------------------------------------
 
-## 🌩 Step 6: Configure AWS CLI on Ansible Server
-
-Terraform requires AWS CLI credentials with **AdministratorAccess**.
-
-``` bash
-aws configure
-```
-
-Provide:
-
--   AWS Access Key ID\
--   AWS Secret Access Key\
--   Default region (ex: ap-south-1)\
--   Output → json
-
-Ensure IAM user/role has:
-
-    AdministratorAccess
-
-------------------------------------------------------------------------
 
 ## 🏗 Step 7: Run Terraform to Provision Infrastructure
 
