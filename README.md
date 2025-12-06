@@ -176,6 +176,14 @@ Expected output:
 
 ------------------------------------------------------------------------
 
+## Check All Dev Machines free space
+
+
+``` bash
+ansible dev -a "df -h"
+```
+
+
 ## ✅ Setup Complete
 
 You now have:
