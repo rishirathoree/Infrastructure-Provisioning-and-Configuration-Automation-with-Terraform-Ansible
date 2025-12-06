@@ -57,10 +57,3 @@ ansible dev -m ping
  git add .
  git commit -m "added changes"
  git push origin main
-
-# Add Duckerhub Credential in Jenkins
-# Add Github Repo
-# Add Jenkins Server Private Key In Credential to access the jenkins agent
-# Add Github Webhook in Jenkins to jenkins server ip http://yourip:jenkinport/github-webhooks/
-# Add Stage View Plugin
-# Add Github Branch Source Plugin

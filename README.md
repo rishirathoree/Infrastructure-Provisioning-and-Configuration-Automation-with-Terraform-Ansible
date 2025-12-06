@@ -6,7 +6,7 @@ VM folder structure, and use **Terraform** to provision AWS
 infrastructure. Follow the steps carefully to build a fully automated
 IaC workflow.
 
-## 📂 Step 0: Create VM Folder & Generate SSH Key
+## 📂 Create VM Folder & Generate SSH Key
 
 On your **local machine**, create a VM workspace and generate your SSH
 key:
@@ -91,7 +91,7 @@ networking, etc.
 
 ------------------------------------------------------------------------
 
-## 📁 Step 1: Connect to Ansible Server
+## 📁  Connect to Ansible Server
 
 ``` bash
 ssh -i mykey ubuntu@52.66.224.25
@@ -100,7 +100,7 @@ cd ~/.ssh
 
 ------------------------------------------------------------------------
 
-## 📦 Step 2: Install Ansible on Master
+## 📦Install Ansible on Master
 
 ``` bash
 sudo apt update
@@ -117,7 +117,7 @@ ansible --version
 
 ------------------------------------------------------------------------
 
-## 📄 Step 3: Update Hosts File
+## 📄 Update Hosts File
 
 ``` bash
 cd /
@@ -138,7 +138,7 @@ ansible_private_key_file=/home/ubuntu/.ssh/mykey
 
 ------------------------------------------------------------------------
 
-## 📤 Step 4: Copy SSH Keys to Ansible Server
+## 📤 Copy SSH Keys to Ansible Server
 
 Inside your local **vm** folder:
 
@@ -148,7 +148,7 @@ scp -i mykey -r ./* ubuntu@52.66.224.25:/home/ubuntu/.ssh
 
 ------------------------------------------------------------------------
 
-## 🔗 Step 5: Test SSH Access to Both Machines
+## 🔗 Test SSH Access to Both Machines
 
 On the Ansible server:
 
@@ -163,7 +163,7 @@ If both connect without prompts, SSH is configured correctly.
 ------------------------------------------------------------------------
 
 
-## 🚀 Step 8: Test Ansible Connectivity
+## 🚀  Test Ansible Connectivity
 
 ``` bash
 ansible dev -m ping
