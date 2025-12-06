@@ -6,8 +6,26 @@ VM folder structure, and use **Terraform** to provision AWS
 infrastructure. Follow the steps carefully to build a fully automated
 IaC workflow.
 
+## 📂 Step 0: Create VM Folder & Generate SSH Key
+
+On your **local machine**, create a VM workspace and generate your SSH
+key:
+
+``` bash
+mkdir vm
+cd vm
+ssh-keygen -t rsa -b 4096 -C "mykey" -f mykey
+```
+
+This will create:
+
+    vm/mykey        (private key)
+    vm/mykey.pub    (public key)
+
 ------------------------------------------------------------------------
 
+
+------------------------------------------------------------------------
 
 ## 🌩 Configure AWS CLI on Ansible Server
 
@@ -30,21 +48,30 @@ Ensure IAM user/role has:
 
 ------------------------------------------------------------------------
 
-## 📂 Step 0: Create VM Folder & Generate SSH Key
 
-On your **local machine**, create a VM workspace and generate your SSH
-key:
+
+## 🏗  Run Terraform to Provision Infrastructure
+
+Go to your Terraform folder inside `dev`:
 
 ``` bash
-mkdir vm
-cd vm
-ssh-keygen -t rsa -b 4096 -C "mykey" -f mykey
+cd dev/terraform-files
 ```
 
-This will create:
+Initialize Terraform:
 
-    vm/mykey        (private key)
-    vm/mykey.pub    (public key)
+``` bash
+terraform init
+```
+
+Provision with auto-approve:
+
+``` bash
+terraform apply -auto-approve
+```
+
+Terraform will create AWS resources such as EC2 instances, VPC,
+networking, etc.
 
 ------------------------------------------------------------------------
 
@@ -135,31 +162,6 @@ If both connect without prompts, SSH is configured correctly.
 
 ------------------------------------------------------------------------
 
-
-## 🏗 Step 7: Run Terraform to Provision Infrastructure
-
-Go to your Terraform folder inside `dev`:
-
-``` bash
-cd dev/terraform-files
-```
-
-Initialize Terraform:
-
-``` bash
-terraform init
-```
-
-Provision with auto-approve:
-
-``` bash
-terraform apply -auto-approve
-```
-
-Terraform will create AWS resources such as EC2 instances, VPC,
-networking, etc.
-
-------------------------------------------------------------------------
 
 ## 🚀 Step 8: Test Ansible Connectivity
 
